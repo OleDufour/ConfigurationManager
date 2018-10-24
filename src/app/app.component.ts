@@ -12,6 +12,11 @@ export class AppComponent {
   title = 'AngConfigurationManager';
   public data = {};
 
+  isDisabled=true;
+  onClickMe($event) {
+    console.log($event);
+  }
+
   public constructor( ) {
       // this.myService.myMethod$.subscribe((data) => {
       //         this.data = data; // And he have data here too!

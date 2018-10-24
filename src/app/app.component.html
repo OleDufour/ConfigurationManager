@@ -8,10 +8,19 @@
     <a href='https://stackoverflow.com/questions/45186469/get-value-from-another-component-angular-4'> todo
       https://stackoverflow.com/questions/45186469/get-value-from-another-component-angular-4</a>
 
-    <h3>
-      Verder met bladzijde 30 !!
-    </h3>
+    <h4>
+      <p style="text-decoration: line-through"> Verder met bladzijde 30 !! </p>
+      Verder met bladzijde 37 !!
+    </h4>
     <img width="30" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==" />
+
+    <button class="btn btn-primary" (click)="onClickMe($event)" [class.disabled]="!isDisabled" >Waarde van isDisabled: {{isDisabled}}</button>
+<br/><br/><br/><h3>3 dingen geleerd</h3>
+    <ul>
+<li>tekst weergeven uit class</li>
+<li>attribuut zetten uit classs</li>
+<li>html events handelen in class</li>
+</ul>
 
 
   </div>
