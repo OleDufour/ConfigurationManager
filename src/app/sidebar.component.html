@@ -1,13 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:left;border-right: 5px solid rgb(78, 78, 78);">
     <ul>
-        <li *ngFor="let c of countries">
-          ddd  {{c}}
+        <li *ngFor="let c of countryList">
+            {{c.name}}
         </li>
     </ul>
 
-    Country
-    <select multiple></select>
+    {{whatever}}
+    <select [(ngModel)] ="country"  class="form-control" (ngModelChange)="selectedCountryChanged2(country )" >
+        <option *ngFor="let c of countryList"   [ngValue]="c" >{{c.name}}</option>
+    </select>
 </div>
 
 <router-outlet></router-outlet>

@@ -1,28 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 import { ReferentialService } from './referential.service';
+import { country } from './interface/country'
 
 @Component({
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
     styleUrls: ['./sidebar.component.css'],
-    providers: [ReferentialService]
+    //  providers: [ReferentialService]
 })
 export class SidebarComponent implements OnInit {
-    countries;
-    whatever = 'Sidebar';
-    
- 
-    public constructor( rs:ReferentialService) {
-        //this.myService.myMethod(this.data);
-        this.countries=rs.getCities();
+
+    whatever = 'Select a country';
+    private countryList: country[] = [];
+    @Output() countryChanged= new EventEmitter<country>();
+
+    public constructor(rs: ReferentialService) {
+        this.countryList = rs.getCountryList();
+        console.log(this.countryList)
+    } 
+    ngOnInit() {
+        //  alert('test')
+        var countrie
     }
 
-
-    ngOnInit() {
-      //  alert('test')
-        var countries
-
+    selectedCountryChanged2 (selectedCountry:country) { 
+       alert( selectedCountry.name );
+       this.countryChanged.emit(selectedCountry);
     }
 
 }
